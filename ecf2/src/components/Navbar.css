@@ -1,0 +1,112 @@
+/* src/components/Navbar.css */
+.navbar-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* Initially hidden - changed from -500px to -100% for better responsiveness */
+  width: 300px;
+  height: 100vh; /* Use viewport height instead of percentage */
+  background-color: rgb(17, 50, 89);
+  box-shadow: 0px 0px 20px 2px rgb(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto; /* Enable scrolling if menu is tall */
+}
+
+.open-nav {
+  right: 0 !important; /* Force it to display when open with !important */
+}
+
+.toggle-button-nav,
+.close-button-nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  border: 1px solid rgb(185, 185, 185);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above navbar */
+  transition: transform 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+.toggle-button-nav:hover,
+.close-button-nav:hover {
+  transform: scale(1.2);
+  background-color: skyblue;
+}
+
+.toggle-button-nav.hidden {
+  display: none;
+}
+
+.navbar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 100px 20px 0 20px;
+  padding-top: 80px;
+}
+
+.navbar-nav li {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 30px;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.navbar-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.apple li a {
+  color:#ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 8px 5px;
+  width: 100%; /* Make the entire area clickable */
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    width: 100%;
+    right: -100vw; /* Use viewport width instead of percentage */
+  }
+  
+  .navbar-nav ul {
+    margin: 80px 10px 0 10px;
+    padding-top: 60px;
+  }
+  
+  .navbar-nav li {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .toggle-button-nav,
+  .close-button-nav {
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+  }
+  
+  .close-button-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}

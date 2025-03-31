@@ -1,0 +1,175 @@
+/* TreeCounter.css */
+.tree-counter-container {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(111, 186, 13, 0.1), rgba(255, 255, 255, 0.1));
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.2s;
+    user-select: none;
+    display: inline-block;
+    margin-bottom: 5%;
+    margin-top: 1%;
+    position: relative;
+    
+  }
+  
+  .tree-counter-main {
+    margin-bottom: 15px;
+    animation: pulse 2s infinite;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .tree-counter-count {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #6FBA0D;
+    display: block;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    line-height: 1.1;
+  }
+  
+  .tree-counter-label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #113259;
+    display: block;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .tree-counter-loading {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  
+  .tree-counter-error {
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: block;
+    background-color: rgba(217, 83, 79, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Styles for the donation details */
+  .tree-counter-details {
+    background-color: rgba(111, 186, 13, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid rgba(111, 186, 13, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .tree-counter-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid rgba(111, 186, 13, 0.1);
+  }
+  
+  .tree-counter-detail-item:last-child {
+    border-bottom: none;
+  }
+  
+  .tree-counter-detail-item:hover {
+    background-color: rgba(111, 186, 13, 0.2);
+    border-radius: 5px;
+  }
+  
+  .detail-label {
+    font-size: 0.9rem;
+    color: #113259;
+    font-weight: 500;
+  }
+  
+  .detail-value {
+    font-size: 1.1rem;
+    color: #6FBA0D;
+    font-weight: 700;
+  }
+  
+  /* Refresh button styles */
+  .tree-counter-refresh {
+    background-color: rgba(111, 186, 13, 0.1);
+    color: #113259;
+    border: 1px solid rgba(111, 186, 13, 0.3);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    outline: none;
+    opacity: 0.7;
+  }
+  
+  .tree-counter-refresh:hover {
+    background-color: rgba(111, 186, 13, 0.3);
+    color: #113259;
+    opacity: 1;
+  }
+  
+  .tree-counter-refresh:active {
+    transform: scale(0.95);
+  }
+  
+  /* Pulse animation for the counter */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .tree-counter-count {
+      font-size: 4rem;
+    }
+    
+    .tree-counter-label {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .tree-counter-count {
+      font-size: 3rem;
+    }
+    
+    .tree-counter-label {
+      font-size: 1rem;
+    }
+    
+    .tree-counter-container {
+      padding: 15px;
+    }
+  }
+  

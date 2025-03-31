@@ -1,0 +1,83 @@
+/* Header.css */
+
+header {
+  /* text-align: center; */
+  padding: 20px;
+  background-color: rgb(13, 183, 186);
+  /* background-color: rgb(70, 152, 16); */
+  background-image: url('../assets/sky2.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #000000;
+  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+model-viewer {
+  /* position: absolute; */
+  /* left: 0%; */
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.quote {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.modelclass {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+  model-viewer {
+    width: 600px;
+    height: 600px;
+  }
+  
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  model-viewer {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .title {
+    font-size: 36px;
+  }
+  
+  .quote {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  model-viewer {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .modelclass {
+    flex-direction: column;
+  }
+}

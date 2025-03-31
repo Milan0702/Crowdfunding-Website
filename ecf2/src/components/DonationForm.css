@@ -1,0 +1,218 @@
+/* Styles for the main content */
+.payment-window {
+	background-color: #ffffff;
+	box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.1	);
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	padding: 10px;
+	width: 400px;
+	margin: 0 auto;
+}
+
+.toggle-button {
+	background-color: rgb(237, 242, 247);
+	color: #000000;
+	font-size: 24px;
+	font-weight: 500;
+	width: 45%;
+	border: 1px solid rgb(203, 213, 224);
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 5px;
+	cursor: pointer;
+	filter: brightness(100%);
+}
+
+.other-amount-button {
+	background-color: rgb(237, 242, 247);
+	color: #000000;
+	font-size: 24px;
+	width: 92.5%;
+	border: 1px solid rgb(203, 213, 224);
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 5px;
+	cursor: pointer;
+	filter: brightness(100%);
+}
+
+.toggle-button.selected {
+	background-color: rgb(17, 50, 89);
+	color: #ffffff;
+}
+
+.other-amount-button.selected {
+	background-color: rgb(17, 50, 89);
+	color: #ffffff;
+}
+
+.amount-sel-textbox {
+	border: 1px solid rgb(47, 32, 13);
+	border-radius: 5px;
+	padding: 10px;
+	width: 87.5%;
+	height: 25px;
+}
+
+/* input[type="text"] {
+  border: 1px solid rgb(47, 32, 13);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+.next-button {
+	margin-top: 50px;
+	background-color: rgb(220, 88, 42);
+	color: #fff;
+	border-radius: 50px;
+	border: 0;
+	width: 90%;
+	height: 50px;
+	padding: 10px 20px;
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+/* Styles for the pop-up */
+.popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.popup-content {
+	background-color: #99C9D5;
+	padding: 20px;
+	/* height: 70%;
+	width: 25%; */
+	border: 2px solid #000000;
+	border-radius: 5px;
+}
+
+.form1 {
+	text-align: center;
+}
+.popup-content-heading{
+	display: block;
+	padding-bottom: 5%;
+	font-weight: 900;
+	color:rgb(17, 50, 89)
+}
+.popup-label-name{
+	display: block;
+	text-align: left;
+	margin-left: 8%;
+	font-weight: 700;
+	font-size: small;
+	padding-bottom: 1%;
+	color:rgb(17, 50, 89)
+}
+.popup-label{
+	text-align: left;
+	margin-left: 6%;
+	margin-top: 3%;
+}
+.popup-label-check{
+	display: block;
+	font-weight: 700;
+	font-size: small;
+	padding-bottom: 1%;
+	margin-right: 5%;
+	margin-top: 3%;
+	flex-wrap: wrap;
+	color:rgb(17, 50, 89);
+}
+
+.popup-textbox {
+	width: 80%;
+	padding: 10px;
+	margin-top: auto;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	/* background-color:#9C8185; */
+	color: #010201;
+}
+.popup-checkbox {
+	/* display: block; */
+	width:75%;
+	margin-top: 5%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	
+	/* background-color:#9C8185; */
+}
+
+.close-button {
+	padding: 10px 20px;
+	background-color: rgb(17, 50, 89);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.submit-button {
+	padding: 10px 20px;
+	margin: 10px 20px 10px 0px;
+	background-color: rgb(17, 50, 89);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;                         
+}
+
+/* Error message styles */
+.error-message {
+	color: red;
+	font-size: 12px;
+	margin-top: -5px;
+	margin-bottom: 5px;
+	text-align: left;
+	margin-left: 8%;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 768px) {
+	.payment-window {
+		width: 90%;
+		max-width: 400px;
+		padding: 5px;
+	}
+
+	.toggle-button, .other-amount-button {
+		font-size: 18px;
+		padding: 8px 15px;
+	}
+
+	.next-button {
+		font-size: 20px;
+		height: 40px;
+	}
+
+	.popup-content {
+		width: 90%;
+		max-width: 350px;
+		height: auto;
+	}
+
+	.popup-textbox {
+		width: 90%;
+	}
+
+	.popup-label-check {
+		font-size: 11px;
+	}
+}
+  

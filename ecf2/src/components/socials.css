@@ -1,0 +1,46 @@
+/* TeamTreesSocial.css */
+.team-trees-social {
+    background-image: url('https://teamtrees.org/img/footer.png');
+    height: 100% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(17, 50, 89);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    color: white;
+    font-size: 24px;
+  }
+  
+.content{
+    /* margin-top: -30%; */
+    color: #99C9D5;
+    padding-top: 0;
+}
+  
+/* Add responsive styles at the end of the file */
+@media screen and (max-width: 768px) {
+    .social-media-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-media-icon {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .social-media-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-media-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+  
