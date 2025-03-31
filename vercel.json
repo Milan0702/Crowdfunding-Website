@@ -35,6 +35,6 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "@api_url"
+    "REACT_APP_API_URL": "https://crowdfunding-website-production.up.railway.app"
   }
 } 
