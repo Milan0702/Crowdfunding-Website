@@ -2,15 +2,11 @@
   "version": 2,
   "buildCommand": "cd ecf2 && npm install && npm run build",
   "outputDirectory": "ecf2/build",
-  "installCommand": "cd ecf2 && npm install",
-  "framework": "create-react-app",
+  "framework": null,
   "builds": [
     {
       "src": "ecf2/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
@@ -19,7 +15,7 @@
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       },
-      "continue": true
+      "dest": "/static/$1"
     },
     {
       "src": "/favicon.ico",
