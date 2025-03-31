@@ -1,15 +1,16 @@
 FROM node:18-alpine
 
-WORKDIR /app
+# Set working directory
+WORKDIR /usr/src/app
 
-# Copy package files
-COPY package*.json ./
+# First, copy only package files to leverage Docker cache
+COPY Backend/package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies with specific npm flags for better reliability
+RUN npm install --production --no-optional --no-audit
 
-# Copy the rest of the application
-COPY . .
+# Now copy the rest of the backend application
+COPY Backend/ ./
 
 # Expose the port your app runs on
 EXPOSE 4000
