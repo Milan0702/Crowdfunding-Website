@@ -1,7 +1,7 @@
 // API endpoint configuration
 
 // Production API endpoint (deployed backend)
-const PRODUCTION_API = process.env.NEXT_PUBLIC_API_URL || process.env.REACT_APP_API_URL || 'https://crowdfunding-website-production.up.railway.app';
+const PRODUCTION_API = 'https://crowdfunding-website-production.up.railway.app';
 
 // Development API endpoint (local backend)
 const DEVELOPMENT_API = 'http://localhost:4000';
@@ -16,7 +16,7 @@ const endpoints = {
   donateAmount: `${API_URL}/donateAmount`,
   treeCount: `${API_URL}/api/treeCount`,
   leaderboard: `${API_URL}/leaderboard`,
-  fetchDonors: `${API_URL}/fetchDonors`,
+  fetchDonors: `${API_URL}/leaderboard`
 };
 
 export default endpoints; 
